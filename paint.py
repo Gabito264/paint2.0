@@ -43,6 +43,19 @@ def circle(start, end):
 
 def rectangle(start, end):
     """Draw rectangle from start to end."""
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(4):
+        if count%2 == 0:
+            forward((100+end.x )- start.x)
+        else:
+            forward(end.x - start.x)
+        left(90)
+
+    end_fill()
     pass  # TODO
 
 
